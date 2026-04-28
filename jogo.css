@@ -6,7 +6,7 @@
     --verde-cabeca:#86efac;
     --comida: #f87171;
     --fundo: #0a0f0a;
-    --fundo-grande: #111a11;
+    --fundo-grade: #111a11;
     --borda: #1f3320;
     --texto: #d1fae5;
     --esmaecido: #6b7280;
@@ -77,4 +77,23 @@ body {
     font-size: 1rem;
     color: var(--verde);
     line-height: 1.4;
+}
+
+.arena {
+    position: relative;
+}
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(var(--colunas), var(--tamanho-celula));
+    grid-template-rows: repeat(var(--colunas), var(--tamanho-celula));
+    background: var(--fundo-grade);
+    border: 2px solid var(--borda);
+    border-radius: 4px;
+    gap: 1px;
+    padding: 1px;
+    background-image:
+        linear-gradient(var(--borda) 1px, transparent 1px),
+        linear-gradient(90deg, var(--borda) 1px, transparent 1px);
+    background-size: calc(var(--tamanho-celula) + 1px) calc(var(--tamanho-celula) + 1px);
 }
